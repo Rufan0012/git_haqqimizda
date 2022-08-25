@@ -1,0 +1,144 @@
+:root {
+    --primary_green: #016b38;
+    --primary_green_dark: #0a4227;
+    --secondary_color_brown:#b08968;
+}
+*{
+    font-family: sans-serif;
+}
+body{
+    margin: 0;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary_green);
+    padding: 20px 80px;
+}
+header>*{
+    color: white;
+}
+header >.left_size{
+    display: flex;
+    gap: 30px;
+}
+.left_size>div{
+    display: flex;
+    gap: 6px;
+}
+.left_size>div>p{
+    margin: 0;
+}
+header>.right_side {
+    display: flex;
+    gap: 20px;
+}
+
+/* navigation */
+nav{
+    padding: 30px 80px;
+    display: flex;
+    justify-content: space-between;
+}
+nav>.logo_container{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.nav_links{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    align-items: center;
+}
+.nav_links a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+.company_name>*{
+     margin: 0;
+     color: var(--primary_green);
+}
+.company_name>p{
+    text-align: center;
+}
+
+/* banner */
+.banner{
+    padding: 100px 80px 40px;
+    background-image: url(./img/banner_back.png);
+    background-size: cover;
+    position: relative;
+}
+.banner *{
+    color: white;
+    margin: 0;
+}
+.banner::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary_green);
+    opacity: 0.7;
+}
+.banner>div{
+    position: relative;
+    z-index: 1;
+}   
+.banner>div>p{
+    margin-top: 10px;
+} 
+.banner>div>h1{
+    border-left: 6px solid var(--secondary_color_brown);
+} 
+
+/* main */
+main{
+    padding: 100px 80px 30px;
+}
+.section1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+.worker_image_container{
+    width: 400px;
+    height: 320px;
+    position: relative;
+}
+.worker_image_container::before{
+    content: "";
+    width: 400px;
+    height: 320px;
+    border: 2px solid var(--primary_green);
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    z-index: -1;
+}
+.worker_image_container::after{
+    content: "";
+    width: 400px;
+    height: 320px;
+    border: 2px solid var(--primary_green);
+    position: absolute;
+    right: -40px;
+    bottom: -40px;
+    z-index: -1;
+}
+.worker_image_container>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.section .section_header{
+    font-size: 2.2rem;
+}
+.section1  p{
+    line-height: 25px;
+    color: gray;
+}
